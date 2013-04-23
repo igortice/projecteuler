@@ -12,4 +12,11 @@ module Euler
       valores unless block_given?
     end
   end
+
+  class Primo
+    require 'prime'
+    def self.divisores(valor)
+      valor.prime_division.transpose.first
+    end
+  end
 end
