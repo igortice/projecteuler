@@ -19,4 +19,9 @@ module Euler
       valor.prime_division.transpose.first
     end
   end
+
+  def self.palindrome(valor)
+    valor = valor.to_s
+    valor == valor.reverse
+  end
 end
