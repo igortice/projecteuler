@@ -18,6 +18,10 @@ module Euler
     def self.divisores(valor)
       valor.prime_division.transpose.first
     end
+
+    def self.posicao(valor)
+      Prime.first(valor).last
+    end
   end
 
   def self.palindrome(valor)
