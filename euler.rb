@@ -22,6 +22,10 @@ module Euler
     def self.posicao(valor)
       Prime.first(valor).last
     end
+
+    def self.soma(quantidade)
+      Prime.each(quantidade).inject(:+)
+    end
   end
 
   def self.palindrome(valor)
