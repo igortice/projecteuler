@@ -15,8 +15,13 @@ module Euler
 
   class Primo
     require 'prime'
+
     def self.divisores(valor)
       valor.prime_division.transpose.first
+    end
+
+    def self.numero_divisores(valor)
+      valor.prime_division.transpose.last.inject(1){|resultado, elemento| resultado * (elemento+1)}
     end
 
     def self.posicao(valor)
